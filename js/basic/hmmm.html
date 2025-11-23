@@ -1,0 +1,111 @@
+<script>
+function reverString(str){
+  return str.split('').reverse().join('');
+}
+console.log("harsha");
+
+console.log(reverString("harsha"));
+</script>
+
+
+<script>
+function palindromeString(str){
+  let rev = str.split('').reverse().join('');
+  return rev === str;
+}
+console.log("989");
+
+console.log(palindromeString("889"));
+</script>
+
+
+<script>
+function maxOfArray(arr){
+  return Math.max(...arr);
+}
+let arr = [1,2,30,4,5];
+console.log(maxOfArray(arr));
+</script>
+
+
+<script>
+function duplicRemoveFromArray(arr1){
+  return [...new Set(arr1)];
+}
+let arr1 = [1,2,30,1,4,5,5];
+console.log(duplicRemoveFromArray(arr1));
+</script>
+
+
+<script>
+function freq(str){
+  let map={};
+  for(let ch of str){
+	map[ch] = (map[ch] || 0) + 1;
+  }
+  return map;
+}
+console.log(freq("harsha"));
+</script>
+
+
+<script>
+function sumOfDigits(num){
+  return num.toString().split('').reduce((a,b) => a + Number(b),0);
+}
+console.log(sumOfDigits(90));
+</script>
+
+
+
+<script>
+function fibo(num){
+	let a = 0, b = 1;
+	for(let i=0; i<num; i++){
+		console.log(a);
+		[a,b] = [b, a+b];
+	}
+}
+console.log(fibo(9));
+</script>
+
+
+<script>
+function missingNUmber(arr) {
+	let n2 = arr.length + 1;
+	let total = (n2 * (n2+1))/2;
+	let sumOfArr = arr.reduce((a,b)=> a+b , 0);
+	let missingNumber = total - sumOfArr;
+	return missingNumber;
+}
+console.log(missingNUmber([1,2,3,5,6]));
+</script>
+
+
+
+<script>
+function missingNUmber(arr) {
+	let n2 = arr.length + 1;
+	let total = (n2 * (n2+1))/2;
+	let sumOfArr = arr.reduce((a,b)=> a+b , 0);
+	let missingNumber = total - sumOfArr;
+	return missingNumber;
+}
+console.log(missingNUmber([1,2,3,5,6]));
+</script>
+
+
+
+<script>
+function sortWithoutSortFunction(arr) {
+	for(let i=0; i< arr.length; i++){
+		for(let j=i+1; j< arr.length; j++){
+			if(arr[j] < arr[i]){
+				[arr[i],arr[j]] = [arr[j],arr[i]];
+			}
+		}
+	}
+	return arr;
+}
+console.log(sortWithoutSortFunction([5,7,2,1]));
+</script>
